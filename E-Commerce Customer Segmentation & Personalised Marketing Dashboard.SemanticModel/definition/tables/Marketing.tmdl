@@ -1,0 +1,393 @@
+table Marketing
+	lineageTag: 95d16ac8-2f5e-4d04-b0ba-51e719d8f4a4
+
+	column 'Customer ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 904718a4-6ca9-413b-85f1-ea806d34b719
+		summarizeBy: none
+		sourceColumn: Customer ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Birth Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4323d435-88d1-4c24-9bb5-62f574b9acfe
+		summarizeBy: sum
+		sourceColumn: Birth Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Generation
+		dataType: string
+		lineageTag: b310342e-156b-447e-a0ca-81e3f6e79c9a
+		summarizeBy: none
+		sourceColumn: Generation
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Highest Education'
+		dataType: string
+		lineageTag: fdfa8e15-7d81-42f5-8419-9c06229f0afd
+		summarizeBy: none
+		sourceColumn: Highest Education
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marital Status'
+		dataType: string
+		lineageTag: c6aeaeab-10a7-415d-ab2f-e12c93c57996
+		summarizeBy: none
+		sourceColumn: Marital Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Has Children'
+		dataType: string
+		lineageTag: 5a8d2c96-f6dd-4b52-9ea3-1aeb1d90175f
+		summarizeBy: none
+		sourceColumn: Has Children
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Has Married'
+		dataType: string
+		lineageTag: 539b663d-6de2-445a-b324-bfc5917a0dc2
+		summarizeBy: none
+		sourceColumn: Has Married
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Has Widowed'
+		dataType: string
+		lineageTag: 1b795180-ba32-4ea8-b10a-bed6c3edbd1e
+		summarizeBy: none
+		sourceColumn: Has Widowed
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Has Engaged'
+		dataType: string
+		lineageTag: 9664a706-ecfc-41ca-9fdb-1f32e66a9a8f
+		summarizeBy: none
+		sourceColumn: Has Engaged
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Household Status'
+		dataType: string
+		lineageTag: 1f232628-75c3-4bfd-85ad-7e781d39cfd2
+		summarizeBy: none
+		sourceColumn: Household Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Annual Household Income'
+		dataType: double
+		lineageTag: 025bcafa-7afa-4bb1-80f7-9b8cec1c73be
+		summarizeBy: sum
+		sourceColumn: Annual Household Income
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Small Children in Household'
+		dataType: int64
+		formatString: 0
+		lineageTag: ed5dcf16-132d-4034-a22d-464f85ba7995
+		summarizeBy: sum
+		sourceColumn: Small Children in Household
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Teenager in Household'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4880c238-8a45-4aa3-92d7-289948dc6705
+		summarizeBy: sum
+		sourceColumn: Teenager in Household
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Children in Household'
+		dataType: int64
+		formatString: 0
+		lineageTag: efa06047-f041-48a8-8663-7b6f57fd888e
+		summarizeBy: sum
+		sourceColumn: Total Children in Household
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Enrolment Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 02aa407a-4478-428a-81ca-015691bada94
+		summarizeBy: none
+		sourceColumn: Customer Enrolment Date
+
+		variation Variation
+			isDefault
+			relationship: 6f5dd9b6-962b-404e-ae89-6ead97837a85
+			defaultHierarchy: LocalDateTable_3d09a566-3793-4df5-90bf-ce6f84586b84.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Days Since Last Purchase'
+		dataType: int64
+		formatString: 0
+		lineageTag: b66eb29b-b486-41ca-90c3-b7dbd9b6cc4a
+		summarizeBy: sum
+		sourceColumn: Days Since Last Purchase
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Wine Sales'
+		dataType: int64
+		formatString: 0
+		lineageTag: 360021ea-54a8-4caa-97d7-f9608623da2e
+		summarizeBy: sum
+		sourceColumn: Wine Sales
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fruit Sales'
+		dataType: int64
+		formatString: 0
+		lineageTag: 94dd5503-f24d-4564-9dad-52ed1c6b4a77
+		summarizeBy: sum
+		sourceColumn: Fruit Sales
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Meat Sales'
+		dataType: int64
+		formatString: 0
+		lineageTag: e0d73340-4f1d-4912-863c-558a505c25ec
+		summarizeBy: sum
+		sourceColumn: Meat Sales
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fish Sales'
+		dataType: int64
+		formatString: 0
+		lineageTag: ff154cc7-a627-47cb-b33e-60f99cd26b52
+		summarizeBy: sum
+		sourceColumn: Fish Sales
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sweets Sales'
+		dataType: int64
+		formatString: 0
+		lineageTag: dec644f0-0b08-4503-bc3c-3a982eb2f4fd
+		summarizeBy: sum
+		sourceColumn: Sweets Sales
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gold Sales'
+		dataType: int64
+		formatString: 0
+		lineageTag: d983604e-c135-4088-84a3-8785d6acbcbc
+		summarizeBy: sum
+		sourceColumn: Gold Sales
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Sales'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e9220d6-364a-4e03-8da3-f54430482859
+		summarizeBy: sum
+		sourceColumn: Total Sales
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Purchases using Discount'
+		dataType: int64
+		formatString: 0
+		lineageTag: 44b49a2e-69c6-49d9-8787-b4b66ab7bf8a
+		summarizeBy: sum
+		sourceColumn: Purchases using Discount
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Purchases through Website'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3bce4fa2-f294-4a60-999c-8bb65f7b47bb
+		summarizeBy: sum
+		sourceColumn: Purchases through Website
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Purchases through Catalogue'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4a62a49b-9d37-4ada-99b7-9ba020b99107
+		summarizeBy: sum
+		sourceColumn: Purchases through Catalogue
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Purchases through Store'
+		dataType: int64
+		formatString: 0
+		lineageTag: a6d09175-b016-438a-89bc-854c28e1cc55
+		summarizeBy: sum
+		sourceColumn: Purchases through Store
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Purchases'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2e01b7b7-0531-44b0-b158-9f17f21a7fe1
+		summarizeBy: sum
+		sourceColumn: Total Purchases
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Monthly Website Visits'
+		dataType: int64
+		formatString: 0
+		lineageTag: 11521c41-a9b2-41df-9be8-f19193f50e5a
+		summarizeBy: sum
+		sourceColumn: Monthly Website Visits
+
+		annotation SummarizationSetBy = Automatic
+
+	column Complained
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 031f978c-e55a-4fd8-be35-503907661ad5
+		summarizeBy: none
+		sourceColumn: Complained
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Contact Cost'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c112a13-1dab-4321-9130-b88c5d6ad1ed
+		summarizeBy: sum
+		sourceColumn: Customer Contact Cost
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Revenue from Customer'
+		dataType: int64
+		formatString: 0
+		lineageTag: 33db54ad-710f-4544-9f34-2d673e7bc7d7
+		summarizeBy: sum
+		sourceColumn: Revenue from Customer
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Responded to First Campaign'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 28d64193-05cf-454e-a0a2-d9919bf05f7c
+		summarizeBy: none
+		sourceColumn: Responded to First Campaign
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Responded to Second Campaign'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 16412ce8-7407-4926-b741-c30ec02a9f18
+		summarizeBy: none
+		sourceColumn: Responded to Second Campaign
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Responded to Third Campaign'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: fbae4d81-8678-4c05-bd5d-7b5479409daf
+		summarizeBy: none
+		sourceColumn: Responded to Third Campaign
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Responded to Fourth Campaign'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e0b23d8b-fcc7-4b84-9173-ad39162a3aed
+		summarizeBy: none
+		sourceColumn: Responded to Fourth Campaign
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Responded to Fifth Campaign'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0ec53cf9-f817-4e2d-9944-1bae9b985ec4
+		summarizeBy: none
+		sourceColumn: Responded to Fifth Campaign
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Responded to Last Campaign'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: d1c8c0f1-0716-4418-aa34-c80d86c44907
+		summarizeBy: none
+		sourceColumn: Responded to Last Campaign
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Marketing = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://365umedumy.sharepoint.com/sites/WIE3008GP1Group11", [ApiVersion = 15]),
+				    #"marketing_campaign csv_https://365umedumy sharepoint com/sites/WIE3008GP1Group11/Shared Documents/" = Source{[Name="marketing_campaign.csv",#"Folder Path"="https://365umedumy.sharepoint.com/sites/WIE3008GP1Group11/Shared Documents/"]}[Content],
+				    #"Imported CSV" = Csv.Document(#"marketing_campaign csv_https://365umedumy sharepoint com/sites/WIE3008GP1Group11/Shared Documents/",[Delimiter=";", Columns=29, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Imported CSV", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"Year_Birth", Int64.Type}, {"Education", type text}, {"Marital_Status", type text}, {"Income", Int64.Type}, {"Kidhome", Int64.Type}, {"Teenhome", Int64.Type}, {"Dt_Customer", type date}, {"Recency", Int64.Type}, {"MntWines", Int64.Type}, {"MntFruits", Int64.Type}, {"MntMeatProducts", Int64.Type}, {"MntFishProducts", Int64.Type}, {"MntSweetProducts", Int64.Type}, {"MntGoldProds", Int64.Type}, {"NumDealsPurchases", Int64.Type}, {"NumWebPurchases", Int64.Type}, {"NumCatalogPurchases", Int64.Type}, {"NumStorePurchases", Int64.Type}, {"NumWebVisitsMonth", Int64.Type}, {"AcceptedCmp3", Int64.Type}, {"AcceptedCmp4", Int64.Type}, {"AcceptedCmp5", Int64.Type}, {"AcceptedCmp1", Int64.Type}, {"AcceptedCmp2", Int64.Type}, {"Complain", Int64.Type}, {"Z_CostContact", Int64.Type}, {"Z_Revenue", Int64.Type}, {"Response", Int64.Type}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"ID", "Customer ID"}, {"Year_Birth", "Birth Year"}, {"Education", "Highest Education"}, {"Marital_Status", "Marital Status"}, {"Income", "Annual Household Income"}, {"Kidhome", "Small Children in Household"}, {"Teenhome", "Teenager in Household"}, {"Dt_Customer", "Customer Enrolment Date"}, {"Recency", "Days Since Last Purchase"}, {"MntWines", "Wine Sales"}, {"MntFruits", "Fruit Sales"}, {"MntMeatProducts", "Meat Sales"}, {"MntFishProducts", "Fish Sales"}, {"MntSweetProducts", "Sweets Sales"}, {"MntGoldProds", "Gold Sales"}, {"NumDealsPurchases", "Purchases using Discount"}, {"NumWebPurchases", "Purchases through Website"}, {"NumCatalogPurchases", "Purchases through Catalogue"}, {"NumStorePurchases", "Purchases through Store"}, {"NumWebVisitsMonth", "Monthly Website Visits"}}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Renamed Columns",{"Customer ID", "Birth Year", "Highest Education", "Marital Status", "Annual Household Income", "Small Children in Household", "Teenager in Household", "Customer Enrolment Date", "Days Since Last Purchase", "Wine Sales", "Fruit Sales", "Meat Sales", "Fish Sales", "Sweets Sales", "Gold Sales", "Purchases using Discount", "Purchases through Website", "Purchases through Catalogue", "Purchases through Store", "Monthly Website Visits", "Complain", "AcceptedCmp1", "AcceptedCmp2", "AcceptedCmp3", "AcceptedCmp4", "AcceptedCmp5", "Z_CostContact", "Z_Revenue", "Response"}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Reordered Columns",{{"Complain", "Complained"}}),
+				    #"Reordered Columns1" = Table.ReorderColumns(#"Renamed Columns1",{"Customer ID", "Birth Year", "Highest Education", "Marital Status", "Annual Household Income", "Small Children in Household", "Teenager in Household", "Customer Enrolment Date", "Days Since Last Purchase", "Wine Sales", "Fruit Sales", "Meat Sales", "Fish Sales", "Sweets Sales", "Gold Sales", "Purchases using Discount", "Purchases through Website", "Purchases through Catalogue", "Purchases through Store", "Monthly Website Visits", "Complained", "Z_CostContact", "Z_Revenue", "AcceptedCmp1", "AcceptedCmp2", "AcceptedCmp3", "AcceptedCmp4", "AcceptedCmp5", "Response"}),
+				    #"Renamed Columns2" = Table.RenameColumns(#"Reordered Columns1",{{"Z_CostContact", "Customer Contact Cost"}, {"Z_Revenue", "Revenue from Customer"}, {"AcceptedCmp1", "Responded to First Campaign"}, {"AcceptedCmp2", "Responded to Second Campaign"}, {"AcceptedCmp3", "Responded to Third Campaign"}, {"AcceptedCmp4", "Responded to Fourth Campaign"}, {"AcceptedCmp5", "Responded to Fifth Campaign"}, {"Response", "Responded to Last Campaign"}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Renamed Columns2",null,52247,Replacer.ReplaceValue,{"Annual Household Income"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","Basic","High School Diploma",Replacer.ReplaceText,{"Highest Education"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","Graduation","Bachelor's Degree",Replacer.ReplaceText,{"Highest Education"}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","Master","Master's Degree",Replacer.ReplaceText,{"Highest Education"}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3","2n Cycle","Master's Degree",Replacer.ReplaceText,{"Highest Education"}),
+				    #"Replaced Value5" = Table.ReplaceValue(#"Replaced Value4","Alone","Single",Replacer.ReplaceText,{"Marital Status"}),
+				    #"Added Custom" = Table.AddColumn(#"Replaced Value5", "Total Children in Household", each [Small Children in Household]+[Teenager in Household]),
+				    #"Reordered Columns2" = Table.ReorderColumns(#"Added Custom",{"Customer ID", "Birth Year", "Highest Education", "Marital Status", "Annual Household Income", "Small Children in Household", "Teenager in Household", "Total Children in Household", "Customer Enrolment Date", "Days Since Last Purchase", "Wine Sales", "Fruit Sales", "Meat Sales", "Fish Sales", "Sweets Sales", "Gold Sales", "Purchases using Discount", "Purchases through Website", "Purchases through Catalogue", "Purchases through Store", "Monthly Website Visits", "Complained", "Customer Contact Cost", "Revenue from Customer", "Responded to First Campaign", "Responded to Second Campaign", "Responded to Third Campaign", "Responded to Fourth Campaign", "Responded to Fifth Campaign", "Responded to Last Campaign"}),
+				    #"Added Conditional Column" = Table.AddColumn(#"Reordered Columns2", "Has Children", each if [Total Children in Household] > 0 then true else false),
+				    #"Added Conditional Column1" = Table.AddColumn(#"Added Conditional Column", "Has Married", each if Text.Contains([Marital Status], "Married") then true else false),
+				    #"Added Conditional Column2" = Table.AddColumn(#"Added Conditional Column1", "Has Widowed", each if Text.Contains([Marital Status], "Widow") then true else false),
+				    #"Added Conditional Column3" = Table.AddColumn(#"Added Conditional Column2", "Has Engaged", each if Text.Contains([Marital Status], "Together") then true else false),
+				    #"Added Custom1" = Table.AddColumn(#"Added Conditional Column3", "Family Status", each if [Has Married] = "TRUE" and [Has Children] = "TRUE" then "Married with Children" else if [Has Married] = "TRUE" and [Has Children] = "FALSE" then "Married without Children" else if [Has Widowed] = "TRUE" and [Has Children] = "TRUE" then "Widowed with Children" else if [Has Widowed] = "TRUE" and [Has Children] = "FALSE" then "Widowed without Children" else if [Has Engaged] = "TRUE" and [Has Children] = "TRUE" then "Unmarried Couple with Children" else if [Has Engaged] = "TRUE" and [Has Children] = "FALSE" then "Unmarried Couple without Children" else if [Has Married] = "FALSE" and [Has Engaged] = "FALSE" and [Has Children] = "TRUE" then "Single Parent" else "Single with No Children"),
+				    #"Removed Columns" = Table.RemoveColumns(#"Added Custom1",{"Family Status"}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Removed Columns",{{"Has Children", type text}, {"Has Married", type text}, {"Has Widowed", type text}, {"Has Engaged", type text}}),
+				    #"Uppercased Text" = Table.TransformColumns(#"Changed Type1",{{"Has Children", Text.Upper, type text}, {"Has Married", Text.Upper, type text}, {"Has Widowed", Text.Upper, type text}, {"Has Engaged", Text.Upper, type text}}),
+				    #"Added Custom2" = Table.AddColumn(#"Uppercased Text", "Family Status", each if [Has Married] = "TRUE" and [Has Children] = "TRUE" then "Married with Children" else if [Has Married] = "TRUE" and [Has Children] = "FALSE" then "Married without Children" else if [Has Widowed] = "TRUE" and [Has Children] = "TRUE" then "Widowed with Children" else if [Has Widowed] = "TRUE" and [Has Children] = "FALSE" then "Widowed without Children" else if [Has Engaged] = "TRUE" and [Has Children] = "TRUE" then "Unmarried Couple with Children" else if [Has Engaged] = "TRUE" and [Has Children] = "FALSE" then "Unmarried Couple without Children" else if [Has Married] = "FALSE" and [Has Engaged] = "FALSE" and [Has Children] = "TRUE" then "Single Parent" else "Single with No Children"),
+				    #"Reordered Columns3" = Table.ReorderColumns(#"Added Custom2",{"Customer ID", "Birth Year", "Highest Education", "Marital Status", "Has Children", "Has Married", "Has Widowed", "Has Engaged", "Family Status", "Annual Household Income", "Small Children in Household", "Teenager in Household", "Total Children in Household", "Customer Enrolment Date", "Days Since Last Purchase", "Wine Sales", "Fruit Sales", "Meat Sales", "Fish Sales", "Sweets Sales", "Gold Sales", "Purchases using Discount", "Purchases through Website", "Purchases through Catalogue", "Purchases through Store", "Monthly Website Visits", "Complained", "Customer Contact Cost", "Revenue from Customer", "Responded to First Campaign", "Responded to Second Campaign", "Responded to Third Campaign", "Responded to Fourth Campaign", "Responded to Fifth Campaign", "Responded to Last Campaign"}),
+				    #"Added Conditional Column4" = Table.AddColumn(#"Reordered Columns3", "Generation", each if [Birth Year] < 1901 then "Lost Generation" else if [Birth Year] < 1928 then "Greatest Generation" else if [Birth Year] < 1946 then "Silent Generation" else if [Birth Year] < 1965 then "Baby Boomer" else if [Birth Year] < 1981 then "Generation X" else if [Birth Year] < 1997 then "Millennial" else if [Birth Year] < 2013 then "Generation Z" else if [Birth Year] < 2025 then "Generation Alpha" else "Generation Beta"),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Added Conditional Column4",{{"Generation", type text}}),
+				    #"Reordered Columns4" = Table.ReorderColumns(#"Changed Type2",{"Customer ID", "Birth Year", "Generation", "Highest Education", "Marital Status", "Has Children", "Has Married", "Has Widowed", "Has Engaged", "Family Status", "Annual Household Income", "Small Children in Household", "Teenager in Household", "Total Children in Household", "Customer Enrolment Date", "Days Since Last Purchase", "Wine Sales", "Fruit Sales", "Meat Sales", "Fish Sales", "Sweets Sales", "Gold Sales", "Purchases using Discount", "Purchases through Website", "Purchases through Catalogue", "Purchases through Store", "Monthly Website Visits", "Complained", "Customer Contact Cost", "Revenue from Customer", "Responded to First Campaign", "Responded to Second Campaign", "Responded to Third Campaign", "Responded to Fourth Campaign", "Responded to Fifth Campaign", "Responded to Last Campaign"}),
+				    #"Added Custom3" = Table.AddColumn(#"Reordered Columns4", "Total Sales", each [Wine Sales]+[Fruit Sales]+[Meat Sales]+[Fish Sales]+[Sweets Sales]+[Gold Sales]),
+				    #"Reordered Columns5" = Table.ReorderColumns(#"Added Custom3",{"Customer ID", "Birth Year", "Generation", "Highest Education", "Marital Status", "Has Children", "Has Married", "Has Widowed", "Has Engaged", "Family Status", "Annual Household Income", "Small Children in Household", "Teenager in Household", "Total Children in Household", "Customer Enrolment Date", "Days Since Last Purchase", "Wine Sales", "Fruit Sales", "Meat Sales", "Fish Sales", "Sweets Sales", "Gold Sales", "Total Sales", "Purchases using Discount", "Purchases through Website", "Purchases through Catalogue", "Purchases through Store", "Monthly Website Visits", "Complained", "Customer Contact Cost", "Revenue from Customer", "Responded to First Campaign", "Responded to Second Campaign", "Responded to Third Campaign", "Responded to Fourth Campaign", "Responded to Fifth Campaign", "Responded to Last Campaign"}),
+				    #"Added Custom4" = Table.AddColumn(#"Reordered Columns5", "Total Purchases", each [Purchases through Website]+[Purchases through Catalogue]+[Purchases through Store]),
+				    #"Reordered Columns6" = Table.ReorderColumns(#"Added Custom4",{"Customer ID", "Birth Year", "Generation", "Highest Education", "Marital Status", "Has Children", "Has Married", "Has Widowed", "Has Engaged", "Family Status", "Annual Household Income", "Small Children in Household", "Teenager in Household", "Total Children in Household", "Customer Enrolment Date", "Days Since Last Purchase", "Wine Sales", "Fruit Sales", "Meat Sales", "Fish Sales", "Sweets Sales", "Gold Sales", "Total Sales", "Purchases using Discount", "Purchases through Website", "Purchases through Catalogue", "Purchases through Store", "Total Purchases", "Monthly Website Visits", "Complained", "Customer Contact Cost", "Revenue from Customer", "Responded to First Campaign", "Responded to Second Campaign", "Responded to Third Campaign", "Responded to Fourth Campaign", "Responded to Fifth Campaign", "Responded to Last Campaign"}),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Reordered Columns6",{{"Total Children in Household", Int64.Type}, {"Total Sales", Int64.Type}, {"Total Purchases", Int64.Type}, {"Complained", type logical}, {"Responded to First Campaign", type logical}, {"Responded to Second Campaign", type logical}, {"Responded to Third Campaign", type logical}, {"Responded to Fourth Campaign", type logical}, {"Responded to Fifth Campaign", type logical}, {"Responded to Last Campaign", type logical}}),
+				    #"Renamed Columns3" = Table.RenameColumns(#"Changed Type3",{{"Family Status", "Household Status"}})
+				in
+				    #"Renamed Columns3"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

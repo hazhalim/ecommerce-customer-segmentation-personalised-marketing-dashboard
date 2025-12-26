@@ -1,0 +1,728 @@
+table MestiLaku
+	lineageTag: b566dee9-d022-48ea-9bc8-0f6b5dc72c95
+
+	measure 'Marketing.Conversion Rate' =
+			ROW(
+			    "Conversion Rate (%)",
+			    AVERAGE(MestiLaku[Marketing.Conversion]) * 100
+			)
+		lineageTag: d9bf3d03-1891-4a59-92b4-01c3e7af14e4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Marketing.Response Rate' =
+			ROW(
+			    "Response Rate (%)",
+			    AVERAGE(MestiLaku[Marketing.Response]) * 100
+			)
+		lineageTag: afefe79f-760e-4629-b699-774c5780ad6b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Invoice No'
+		dataType: string
+		lineageTag: f9349263-5f72-42c6-a44a-cf8e5b8fed1a
+		summarizeBy: none
+		sourceColumn: Invoice No
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Invoice Datetime'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ea7582d0-a11b-4854-9253-2ff223d89e9f
+		summarizeBy: none
+		sourceColumn: Invoice Datetime
+
+		variation Variation
+			isDefault
+			relationship: a3d4d244-e75e-44a1-81a4-b8cd4975e439
+			defaultHierarchy: LocalDateTable_0bb3659a-5dce-4cd4-a76a-9394cf8eb6bc.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Stock Code'
+		dataType: string
+		lineageTag: 6d23bbd5-5dab-4465-90c0-0c339939a215
+		summarizeBy: none
+		sourceColumn: Stock Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Stock Description'
+		dataType: string
+		lineageTag: 4777f2bd-207f-4e78-88b8-cb969050b644
+		summarizeBy: none
+		sourceColumn: Stock Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 1e86b8a1-339e-43a6-8eca-e233739039ba
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unit Price'
+		dataType: double
+		lineageTag: 3e02f423-34ae-4dca-950e-8a85229e79a4
+		summarizeBy: sum
+		sourceColumn: Unit Price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Price'
+		dataType: double
+		lineageTag: 1cb6f923-f842-4f0a-a626-e6c74d0872f1
+		summarizeBy: sum
+		sourceColumn: Total Price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Customer ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 997fff6b-284f-46f7-8b9a-5d38a8bd5377
+		summarizeBy: count
+		sourceColumn: Customer ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: fc09a793-8346-4a81-b75c-6362b51d3ca3
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Customer ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1cbdea84-47c4-4eb6-9cdb-e95af28f9fb1
+		summarizeBy: none
+		sourceColumn: Marketing.Customer ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Birth Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: 480a7b73-dfd8-4da6-afa4-1d2afdcd2967
+		summarizeBy: sum
+		sourceColumn: Marketing.Birth Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Generation'
+		dataType: string
+		lineageTag: 2f788605-2e8e-473a-b572-41380c5b1658
+		summarizeBy: none
+		sourceColumn: Marketing.Generation
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Highest Education'
+		dataType: string
+		lineageTag: bb74256a-afd7-44b0-b298-7b4bd4abb29e
+		summarizeBy: none
+		sourceColumn: Marketing.Highest Education
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Marital Status'
+		dataType: string
+		lineageTag: 95758152-5379-453d-befd-184c2bacd22e
+		summarizeBy: none
+		sourceColumn: Marketing.Marital Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Has Children'
+		dataType: string
+		lineageTag: 6498bd5d-4c22-4ed8-be4c-bdd301a90bbb
+		summarizeBy: none
+		sourceColumn: Marketing.Has Children
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Has Married'
+		dataType: string
+		lineageTag: 223b8777-d707-43b5-9c58-7bbef9db0579
+		summarizeBy: none
+		sourceColumn: Marketing.Has Married
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Has Widowed'
+		dataType: string
+		lineageTag: 52b98b49-fff1-4c0d-b37b-4ceea189041d
+		summarizeBy: none
+		sourceColumn: Marketing.Has Widowed
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Has Engaged'
+		dataType: string
+		lineageTag: 1440a09c-25ff-4b5e-ba01-2759da8a7fd9
+		summarizeBy: none
+		sourceColumn: Marketing.Has Engaged
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Household Status'
+		dataType: string
+		lineageTag: 9570868b-07b2-461e-93b5-a4771f6b269e
+		summarizeBy: none
+		sourceColumn: Marketing.Household Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Annual Household Income'
+		dataType: double
+		lineageTag: ffa0c62b-8bf6-431a-ae95-87af7bf83f3a
+		summarizeBy: sum
+		sourceColumn: Marketing.Annual Household Income
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Marketing.Small Children in Household'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8285a5d4-6d4b-4742-8585-4292ca48ede0
+		summarizeBy: sum
+		sourceColumn: Marketing.Small Children in Household
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Teenager in Household'
+		dataType: int64
+		formatString: 0
+		lineageTag: 76840181-24d2-4953-8919-97836202f943
+		summarizeBy: sum
+		sourceColumn: Marketing.Teenager in Household
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Total Children in Household'
+		dataType: int64
+		formatString: 0
+		lineageTag: 03afe050-141b-4492-8656-15970ed5ae33
+		summarizeBy: sum
+		sourceColumn: Marketing.Total Children in Household
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Customer Enrolment Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 819f65d4-68cf-404c-a879-c2e7dcdd552e
+		summarizeBy: none
+		sourceColumn: Marketing.Customer Enrolment Date
+
+		variation Variation
+			isDefault
+			relationship: 14ecbb19-aac2-44ef-8f97-69f89cf2e3cf
+			defaultHierarchy: LocalDateTable_6b22e038-6682-4845-81cf-a03ce42b92c2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Marketing.Days Since Last Purchase'
+		dataType: int64
+		formatString: 0
+		lineageTag: 03fd99a7-278a-479a-aa52-88518255a0cb
+		summarizeBy: sum
+		sourceColumn: Marketing.Days Since Last Purchase
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Wine Sales'
+		dataType: int64
+		formatString: 0
+		lineageTag: a83822d7-34bb-43a4-ba10-17d30ff5f2ad
+		summarizeBy: sum
+		sourceColumn: Marketing.Wine Sales
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Fruit Sales'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9707e53e-a92a-49eb-9d99-3bb57bf95f0d
+		summarizeBy: sum
+		sourceColumn: Marketing.Fruit Sales
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Meat Sales'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c282907-098c-46b0-8f02-d58c1ca56520
+		summarizeBy: sum
+		sourceColumn: Marketing.Meat Sales
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Fish Sales'
+		dataType: int64
+		formatString: 0
+		lineageTag: e8a46025-5f10-4501-a62f-7fff192e0a58
+		summarizeBy: sum
+		sourceColumn: Marketing.Fish Sales
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Sweets Sales'
+		dataType: int64
+		formatString: 0
+		lineageTag: 48b89861-7c4a-45b0-bb12-a46ab56386c8
+		summarizeBy: sum
+		sourceColumn: Marketing.Sweets Sales
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Gold Sales'
+		dataType: int64
+		formatString: 0
+		lineageTag: 67cd974c-ada2-4c5d-8384-536fdcb2d84c
+		summarizeBy: sum
+		sourceColumn: Marketing.Gold Sales
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Total Sales'
+		dataType: int64
+		formatString: 0
+		lineageTag: 62e8dc4e-5283-4890-84d4-a42b794dba9a
+		summarizeBy: sum
+		sourceColumn: Marketing.Total Sales
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Purchases using Discount'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f1ad37d-1a7e-438a-9fe7-84221d1e566f
+		summarizeBy: sum
+		sourceColumn: Marketing.Purchases using Discount
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Purchases through Website'
+		dataType: int64
+		formatString: 0
+		lineageTag: c41ebf9c-8e12-4686-a9ee-fc1484c2d4d2
+		summarizeBy: sum
+		sourceColumn: Marketing.Purchases through Website
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Purchases through Catalogue'
+		dataType: int64
+		formatString: 0
+		lineageTag: 21859489-5439-4e35-88cb-79dfce1a5822
+		summarizeBy: sum
+		sourceColumn: Marketing.Purchases through Catalogue
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Purchases through Store'
+		dataType: int64
+		formatString: 0
+		lineageTag: 39163f52-1050-485a-a443-d04fc769deae
+		summarizeBy: sum
+		sourceColumn: Marketing.Purchases through Store
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Total Purchases'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8f39813d-b2df-4595-8394-30c8f5cd3557
+		summarizeBy: sum
+		sourceColumn: Marketing.Total Purchases
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Monthly Website Visits'
+		dataType: int64
+		formatString: 0
+		lineageTag: d2ec4ec9-5514-4341-8265-19e9110a6295
+		summarizeBy: sum
+		sourceColumn: Marketing.Monthly Website Visits
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Complained'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 7134c557-8ef5-4f02-ab92-430fc1f2f153
+		summarizeBy: none
+		sourceColumn: Marketing.Complained
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Customer Contact Cost'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1faf26d6-2f77-4d32-a51a-6846d5b8757d
+		summarizeBy: sum
+		sourceColumn: Marketing.Customer Contact Cost
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Revenue from Customer'
+		dataType: int64
+		formatString: 0
+		lineageTag: b8b8ae64-4c79-4010-a583-3980c6fcbdf1
+		summarizeBy: sum
+		sourceColumn: Marketing.Revenue from Customer
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Responded to First Campaign'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 789ffcd0-8e1d-491f-9e28-bcab96b84eeb
+		summarizeBy: none
+		sourceColumn: Marketing.Responded to First Campaign
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Responded to Second Campaign'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: d04f82af-af4a-4500-beb4-0b9924600d7a
+		summarizeBy: none
+		sourceColumn: Marketing.Responded to Second Campaign
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Responded to Third Campaign'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 62552e87-c425-4f1b-9085-67535df5c485
+		summarizeBy: none
+		sourceColumn: Marketing.Responded to Third Campaign
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Responded to Fourth Campaign'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f28e57a8-cf07-40c5-a6bb-eddda8f3f3cf
+		summarizeBy: none
+		sourceColumn: Marketing.Responded to Fourth Campaign
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Responded to Fifth Campaign'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b54a4b74-f448-4995-9844-7048ea31339d
+		summarizeBy: none
+		sourceColumn: Marketing.Responded to Fifth Campaign
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Responded to Last Campaign'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a3b6a988-b9af-4c08-b9a7-a432245504db
+		summarizeBy: none
+		sourceColumn: Marketing.Responded to Last Campaign
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Order Number'
+		dataType: string
+		lineageTag: 5c411027-232f-4349-bf38-cc702f619643
+		summarizeBy: none
+		sourceColumn: Orders.Order Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Quantity'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2af1ae10-cb17-4d82-8bf0-e4bdaa700e1c
+		summarizeBy: sum
+		sourceColumn: Orders.Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Unit Price'
+		dataType: double
+		lineageTag: 0f6b101e-ee67-4d04-a519-de533711edde
+		summarizeBy: sum
+		sourceColumn: Orders.Unit Price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Orders.Sales'
+		dataType: double
+		lineageTag: f9d419f4-d7c4-445f-bdab-3b6262f5ba05
+		summarizeBy: sum
+		sourceColumn: Orders.Sales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Orders.Order Line Number'
+		dataType: int64
+		formatString: 0
+		lineageTag: c384ae7e-6357-4fff-8e8c-e7c032a6b4c8
+		summarizeBy: sum
+		sourceColumn: Orders.Order Line Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Order Datetime'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 16f0d5ec-04b8-4e34-8e2a-a112daa5035a
+		summarizeBy: none
+		sourceColumn: Orders.Order Datetime
+
+		variation Variation
+			isDefault
+			relationship: 749e1943-07a7-476c-bec3-3c90312c2839
+			defaultHierarchy: LocalDateTable_92e5d0dc-247b-4de2-a32d-74df14ad6315.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Status'
+		dataType: string
+		lineageTag: 0149e7b9-b8a3-4934-90d3-698debf16065
+		summarizeBy: none
+		sourceColumn: Orders.Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Quarter'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5a2cfb0f-91f7-4888-baa4-29dacedf38c3
+		summarizeBy: sum
+		sourceColumn: Orders.Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Day'
+		dataType: int64
+		formatString: 0
+		lineageTag: 55f1cbff-97b1-4b12-9f20-57b17605444b
+		summarizeBy: sum
+		sourceColumn: Orders.Day
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Month'
+		dataType: int64
+		formatString: 0
+		lineageTag: b04a150f-30b0-4365-922b-a16d6ca01519
+		summarizeBy: sum
+		sourceColumn: Orders.Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: 11d707d3-2a7d-498f-b122-c536b0f6e87d
+		summarizeBy: sum
+		sourceColumn: Orders.Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Product Line'
+		dataType: string
+		lineageTag: 0fe42717-978c-4419-add6-4e6b0499f112
+		summarizeBy: none
+		sourceColumn: Orders.Product Line
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.MSRP'
+		dataType: int64
+		formatString: 0
+		lineageTag: 52dfa038-f656-4bcc-bd45-b15c4d1d22f7
+		summarizeBy: sum
+		sourceColumn: Orders.MSRP
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Product Code'
+		dataType: string
+		lineageTag: 49720168-a083-4d3f-ab23-e1ef7e402937
+		summarizeBy: none
+		sourceColumn: Orders.Product Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Customer Name'
+		dataType: string
+		lineageTag: 3861f118-1883-452b-8c86-7979e1005a8c
+		summarizeBy: none
+		sourceColumn: Orders.Customer Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Phone'
+		dataType: string
+		lineageTag: 16b096ef-2c9e-4a9e-8855-876f70137d10
+		summarizeBy: none
+		sourceColumn: Orders.Phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Address Line 1'
+		dataType: string
+		lineageTag: a9458fd1-fdc2-49db-84d5-b4cb86614605
+		summarizeBy: none
+		sourceColumn: Orders.Address Line 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Address Line 2'
+		dataType: string
+		lineageTag: cf8e3ae0-6d9e-48aa-a1f8-e2216ab047d1
+		summarizeBy: none
+		sourceColumn: Orders.Address Line 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.City'
+		dataType: string
+		lineageTag: e597f938-3bc2-4602-a64d-88921f381a3d
+		summarizeBy: none
+		sourceColumn: Orders.City
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.State'
+		dataType: string
+		lineageTag: 2f71dfd5-ebf2-4c9c-945b-e64cf4498a1a
+		summarizeBy: none
+		sourceColumn: Orders.State
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Postal Code'
+		dataType: string
+		lineageTag: 4bb16947-61cd-4b7d-a4fd-91fe970c7bdc
+		summarizeBy: none
+		sourceColumn: Orders.Postal Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Country'
+		dataType: string
+		lineageTag: d5ca79e4-c760-4bb6-a6f9-e552cfacb8f5
+		summarizeBy: none
+		sourceColumn: Orders.Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Territory'
+		dataType: string
+		lineageTag: 242d8196-5de6-4b6f-bcfe-91d423e3f06a
+		summarizeBy: none
+		sourceColumn: Orders.Territory
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Contact Last Name'
+		dataType: string
+		lineageTag: 3f44bf88-26f2-4b66-8e17-295aa0471669
+		summarizeBy: none
+		sourceColumn: Orders.Contact Last Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Contact First Name'
+		dataType: string
+		lineageTag: 975f22f4-fcf1-4fdb-a670-d3edf9af3219
+		summarizeBy: none
+		sourceColumn: Orders.Contact First Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orders.Deal Size'
+		dataType: string
+		lineageTag: 9bfd5a95-7f7b-4d40-8f87-eb2a3d846f24
+		summarizeBy: none
+		sourceColumn: Orders.Deal Size
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Response'
+		dataType: int64
+		formatString: 0
+		lineageTag: ea439c08-88cf-4d45-8a29-9e2471f03790
+		summarizeBy: sum
+		sourceColumn: Marketing.Response
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Conversion'
+		dataType: int64
+		formatString: 0
+		lineageTag: bdf7ff91-dae4-4b48-b40e-3d310fb08000
+		summarizeBy: sum
+		sourceColumn: Marketing.Conversion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Income Segment'
+		dataType: string
+		lineageTag: 177b9830-08ed-4ded-b9f0-bcf7aabf76a0
+		summarizeBy: none
+		sourceColumn: Marketing.Income Segment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marketing.Recency'
+		dataType: string
+		lineageTag: aab0fe64-1c65-465a-a65c-155ec98971a8
+		summarizeBy: none
+		sourceColumn: Marketing.Recency
+
+		annotation SummarizationSetBy = Automatic
+
+	partition MestiLaku = m
+		mode: import
+		source =
+				let
+				    Source = Table.NestedJoin(SemiMerge, {"Stock Code"}, Orders, {"Order Number"}, "Orders", JoinKind.FullOuter),
+				    #"Expanded Marketing" = Table.ExpandTableColumn(Source, "Marketing", {"Customer ID", "Birth Year", "Generation", "Highest Education", "Marital Status", "Has Children", "Has Married", "Has Widowed", "Has Engaged", "Household Status", "Annual Household Income", "Small Children in Household", "Teenager in Household", "Total Children in Household", "Customer Enrolment Date", "Days Since Last Purchase", "Wine Sales", "Fruit Sales", "Meat Sales", "Fish Sales", "Sweets Sales", "Gold Sales", "Total Sales", "Purchases using Discount", "Purchases through Website", "Purchases through Catalogue", "Purchases through Store", "Total Purchases", "Monthly Website Visits", "Complained", "Customer Contact Cost", "Revenue from Customer", "Responded to First Campaign", "Responded to Second Campaign", "Responded to Third Campaign", "Responded to Fourth Campaign", "Responded to Fifth Campaign", "Responded to Last Campaign"}, {"Marketing.Customer ID", "Marketing.Birth Year", "Marketing.Generation", "Marketing.Highest Education", "Marketing.Marital Status", "Marketing.Has Children", "Marketing.Has Married", "Marketing.Has Widowed", "Marketing.Has Engaged", "Marketing.Household Status", "Marketing.Annual Household Income", "Marketing.Small Children in Household", "Marketing.Teenager in Household", "Marketing.Total Children in Household", "Marketing.Customer Enrolment Date", "Marketing.Days Since Last Purchase", "Marketing.Wine Sales", "Marketing.Fruit Sales", "Marketing.Meat Sales", "Marketing.Fish Sales", "Marketing.Sweets Sales", "Marketing.Gold Sales", "Marketing.Total Sales", "Marketing.Purchases using Discount", "Marketing.Purchases through Website", "Marketing.Purchases through Catalogue", "Marketing.Purchases through Store", "Marketing.Total Purchases", "Marketing.Monthly Website Visits", "Marketing.Complained", "Marketing.Customer Contact Cost", "Marketing.Revenue from Customer", "Marketing.Responded to First Campaign", "Marketing.Responded to Second Campaign", "Marketing.Responded to Third Campaign", "Marketing.Responded to Fourth Campaign", "Marketing.Responded to Fifth Campaign", "Marketing.Responded to Last Campaign"}),
+				    #"Expanded Orders" = Table.ExpandTableColumn(#"Expanded Marketing", "Orders", {"Order Number", "Quantity", "Unit Price", "Sales", "Order Line Number", "Order Datetime", "Status", "Quarter", "Day", "Month", "Year", "Product Line", "MSRP", "Product Code", "Customer Name", "Phone", "Address Line 1", "Address Line 2", "City", "State", "Postal Code", "Country", "Territory", "Contact Last Name", "Contact First Name", "Deal Size"}, {"Orders.Order Number", "Orders.Quantity", "Orders.Unit Price", "Orders.Sales", "Orders.Order Line Number", "Orders.Order Datetime", "Orders.Status", "Orders.Quarter", "Orders.Day", "Orders.Month", "Orders.Year", "Orders.Product Line", "Orders.MSRP", "Orders.Product Code", "Orders.Customer Name", "Orders.Phone", "Orders.Address Line 1", "Orders.Address Line 2", "Orders.City", "Orders.State", "Orders.Postal Code", "Orders.Country", "Orders.Territory", "Orders.Contact Last Name", "Orders.Contact First Name", "Orders.Deal Size"}),
+				    #"Added Conditional Column" = Table.AddColumn(#"Expanded Orders", "Marketing.Response Rate", each if [Marketing.Responded to First Campaign] = null then null else if [Marketing.Responded to First Campaign] = true then true else if [Marketing.Responded to Second Campaign] = true then true else if [Marketing.Responded to Third Campaign] = true then true else if [Marketing.Responded to Fourth Campaign] = true then true else if [Marketing.Responded to Fifth Campaign] = true then true else if [Marketing.Responded to Last Campaign] = true then true else false),
+				    #"Added Conditional Column1" = Table.AddColumn(#"Added Conditional Column", "Marketing.Conversion", each if [Marketing.Total Purchases] = null then null else if [Marketing.Total Purchases] > 5 then true else false),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Added Conditional Column1",{{"Marketing.Response Rate", type logical}, {"Marketing.Conversion", type logical}}),
+				    #"Added Conditional Column2" = Table.AddColumn(#"Changed Type", "Marketing.Income Segment", each if [Marketing.Annual Household Income] = null then null else if [Marketing.Annual Household Income] < 25001 then "Low Income" else if [Marketing.Annual Household Income] < 50001 then "Lower-Middle Income" else if [Marketing.Annual Household Income] < 75001 then "Upper-Middle Income" else if [Marketing.Annual Household Income] < 100001 then "Affluent" else "High Net Worth"),
+				    #"Added Conditional Column3" = Table.AddColumn(#"Added Conditional Column2", "Marketing.Recency", each if [Marketing.Days Since Last Purchase] = null then null else if [Marketing.Days Since Last Purchase] < 16 then "Active" else if [Marketing.Days Since Last Purchase] < 31 then "Recent" else if [Marketing.Days Since Last Purchase] < 61 then "At-Risk" else "Inactive"),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Conditional Column3",{{"Marketing.Income Segment", type text}, {"Marketing.Recency", type text}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type1",{{"Marketing.Response Rate", "Marketing.Response"}}),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Renamed Columns",{{"Marketing.Response", Int64.Type}, {"Marketing.Conversion", Int64.Type}})
+				in
+				    #"Changed Type2"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

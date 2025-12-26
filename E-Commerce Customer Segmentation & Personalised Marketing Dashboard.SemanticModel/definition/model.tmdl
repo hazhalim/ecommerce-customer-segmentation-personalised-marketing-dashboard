@@ -1,0 +1,30 @@
+model Model
+	culture: en-MY
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-MY
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Retail","Marketing","Orders","SemiMerge","MestiLaku"]
+
+annotation PBI_ProTooling = ["DaxQueryView_Desktop","DevMode"]
+
+ref table DateTableTemplate_3fcbd437-b1f8-439b-b2d7-604c140c6579
+ref table Retail
+ref table LocalDateTable_0f67de09-9d51-4d5f-9ff8-72e9ca64b985
+ref table Marketing
+ref table LocalDateTable_3d09a566-3793-4df5-90bf-ce6f84586b84
+ref table Orders
+ref table LocalDateTable_afc824b8-0828-4518-90d1-20d5f858dda9
+ref table SemiMerge
+ref table LocalDateTable_6b231890-afdb-4b3c-8204-8d518eee9d49
+ref table MestiLaku
+ref table LocalDateTable_0bb3659a-5dce-4cd4-a76a-9394cf8eb6bc
+ref table LocalDateTable_6b22e038-6682-4845-81cf-a03ce42b92c2
+ref table LocalDateTable_92e5d0dc-247b-4de2-a32d-74df14ad6315
+
+ref cultureInfo en-MY
+

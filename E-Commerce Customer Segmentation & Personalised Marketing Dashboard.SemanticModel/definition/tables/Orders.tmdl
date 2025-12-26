@@ -1,0 +1,263 @@
+table Orders
+	lineageTag: 214bfb6b-cbfc-43d3-a95e-2fa0e5d54579
+
+	column 'Order Number'
+		dataType: string
+		lineageTag: e0de2947-ec20-46f8-84b9-5db4eb4e526e
+		summarizeBy: none
+		sourceColumn: Order Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: efe72a2f-a5a6-4279-938c-d423bd5dcd12
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unit Price'
+		dataType: double
+		lineageTag: d6371598-6179-41ec-aadc-78577ad5bf04
+		summarizeBy: sum
+		sourceColumn: Unit Price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Sales
+		dataType: double
+		lineageTag: fbfd6587-47af-4edc-80e7-af8ad62af8da
+		summarizeBy: sum
+		sourceColumn: Sales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Order Line Number'
+		dataType: int64
+		formatString: 0
+		lineageTag: 86d1ef12-34a5-45d6-9e48-b11f3edda949
+		summarizeBy: sum
+		sourceColumn: Order Line Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Order Datetime'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f1062261-59f7-44ae-9e6f-7b6842a81434
+		summarizeBy: none
+		sourceColumn: Order Datetime
+
+		variation Variation
+			isDefault
+			relationship: 8b55fce5-6112-42de-bef7-794d6d13e962
+			defaultHierarchy: LocalDateTable_afc824b8-0828-4518-90d1-20d5f858dda9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 8241842c-983e-4a39-b663-b8b034f4145d
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 8b13dc66-9577-4043-b112-19dd715bae20
+		summarizeBy: sum
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		dataType: int64
+		formatString: 0
+		lineageTag: 269599b7-df10-473d-8b5e-eecbe9bf8e3e
+		summarizeBy: sum
+		sourceColumn: Day
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 0a426b63-0e5f-4863-882b-102d5e4c399d
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: f31f8e0f-c950-4d58-b120-9eb0bc7ea737
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Line'
+		dataType: string
+		lineageTag: 1572544a-bdd3-4c1e-9a46-7d8fcceada01
+		summarizeBy: none
+		sourceColumn: Product Line
+
+		annotation SummarizationSetBy = Automatic
+
+	column MSRP
+		dataType: int64
+		formatString: 0
+		lineageTag: 5cfb904c-1755-40a4-8533-ecd1c55ec6f8
+		summarizeBy: sum
+		sourceColumn: MSRP
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Code'
+		dataType: string
+		lineageTag: 9759b627-1ec3-406c-bcc1-9ca265e76bb6
+		summarizeBy: none
+		sourceColumn: Product Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Name'
+		dataType: string
+		lineageTag: ab2cb35f-426c-4dbf-862c-2ac7f9653695
+		summarizeBy: none
+		sourceColumn: Customer Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone
+		dataType: string
+		lineageTag: 8ed28778-43a2-4964-854a-59146ee83577
+		summarizeBy: none
+		sourceColumn: Phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Address Line 1'
+		dataType: string
+		lineageTag: 7c2bff33-3282-4053-89bc-957a8aa5d277
+		summarizeBy: none
+		sourceColumn: Address Line 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Address Line 2'
+		dataType: string
+		lineageTag: 2ba2c308-57f9-4de1-9255-f77dbbee363d
+		summarizeBy: none
+		sourceColumn: Address Line 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 1939dcf4-fdeb-428a-aa0b-a8b17412cded
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: a9a507ce-1c0d-486f-910c-853893a64884
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Postal Code'
+		dataType: string
+		lineageTag: eb6f658b-6246-44d7-aeea-ed0d521437f3
+		summarizeBy: none
+		sourceColumn: Postal Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 3364b857-1460-482d-9c33-6548bb8aad5a
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Territory
+		dataType: string
+		lineageTag: 37117989-1863-4908-8d46-fe9288ae1c0c
+		summarizeBy: none
+		sourceColumn: Territory
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Contact Last Name'
+		dataType: string
+		lineageTag: 784f0802-f573-4d2c-b4e6-572cb908b29a
+		summarizeBy: none
+		sourceColumn: Contact Last Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Contact First Name'
+		dataType: string
+		lineageTag: 5fac1e7a-237f-4408-8346-f217a90590d6
+		summarizeBy: none
+		sourceColumn: Contact First Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Deal Size'
+		dataType: string
+		lineageTag: 30653151-b5be-4893-a5f6-67ed108e835d
+		summarizeBy: none
+		sourceColumn: Deal Size
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Orders = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://365umedumy.sharepoint.com/sites/WIE3008GP1Group11", [ApiVersion = 15]),
+				    #"sales_data_sample csv_https://365umedumy sharepoint com/sites/WIE3008GP1Group11/Shared Documents/" = Source{[Name="sales_data_sample.csv",#"Folder Path"="https://365umedumy.sharepoint.com/sites/WIE3008GP1Group11/Shared Documents/"]}[Content],
+				    #"Imported CSV" = Csv.Document(#"sales_data_sample csv_https://365umedumy sharepoint com/sites/WIE3008GP1Group11/Shared Documents/",[Delimiter=",", Columns=25, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Imported CSV", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ORDERNUMBER", Int64.Type}, {"QUANTITYORDERED", Int64.Type}, {"PRICEEACH", type number}, {"ORDERLINENUMBER", Int64.Type}, {"SALES", type number}, {"ORDERDATE", type text}, {"STATUS", type text}, {"QTR_ID", Int64.Type}, {"MONTH_ID", Int64.Type}, {"YEAR_ID", Int64.Type}, {"PRODUCTLINE", type text}, {"MSRP", Int64.Type}, {"PRODUCTCODE", type text}, {"CUSTOMERNAME", type text}, {"PHONE", type text}, {"ADDRESSLINE1", type text}, {"ADDRESSLINE2", type text}, {"CITY", type text}, {"STATE", type text}, {"POSTALCODE", type text}, {"COUNTRY", type text}, {"TERRITORY", type text}, {"CONTACTLASTNAME", type text}, {"CONTACTFIRSTNAME", type text}, {"DEALSIZE", type text}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"ORDERNUMBER", "Order Number"}, {"QUANTITYORDERED", "Quantity"}, {"PRICEEACH", "Unit Price"}, {"ORDERLINENUMBER", "Order Line Number"}, {"SALES", "Sales"}}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Renamed Columns",{"Order Number", "Quantity", "Unit Price", "Sales", "Order Line Number", "ORDERDATE", "STATUS", "QTR_ID", "MONTH_ID", "YEAR_ID", "PRODUCTLINE", "MSRP", "PRODUCTCODE", "CUSTOMERNAME", "PHONE", "ADDRESSLINE1", "ADDRESSLINE2", "CITY", "STATE", "POSTALCODE", "COUNTRY", "TERRITORY", "CONTACTLASTNAME", "CONTACTFIRSTNAME", "DEALSIZE"}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Reordered Columns",{{"ORDERDATE", "Order Date"}, {"STATUS", "Status"}, {"QTR_ID", "Quarter"}, {"MONTH_ID", "Month"}, {"YEAR_ID", "Year"}, {"PRODUCTLINE", "Product Line"}, {"PRODUCTCODE", "Product Code"}, {"CUSTOMERNAME", "Customer Name"}, {"PHONE", "Phone"}, {"ADDRESSLINE1", "Address Line 1"}, {"ADDRESSLINE2", "Address Line 2"}, {"CITY", "City"}, {"STATE", "State"}, {"POSTALCODE", "Postal Code"}, {"COUNTRY", "Country"}, {"TERRITORY", "Territory"}, {"CONTACTLASTNAME", "Contact Last Name"}, {"CONTACTFIRSTNAME", "Contact First Name"}, {"DEALSIZE", "Deal Size"}}),
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Renamed Columns1", "Order Date", Splitter.SplitTextByDelimiter(" ", QuoteStyle.None), {"Order Date.1", "Order Date.2"}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"Order Date.1", type text}, {"Order Date.2", type time}}),
+				    #"Split Column by Delimiter1" = Table.SplitColumn(#"Changed Type1", "Order Date.1", Splitter.SplitTextByDelimiter("/", QuoteStyle.None), {"Order Date.1.1", "Order Date.1.2", "Order Date.1.3"}),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Split Column by Delimiter1",{{"Order Date.1.1", Int64.Type}, {"Order Date.1.2", Int64.Type}, {"Order Date.1.3", Int64.Type}}),
+				    #"Reordered Columns1" = Table.ReorderColumns(#"Changed Type2",{"Order Number", "Quantity", "Unit Price", "Sales", "Order Line Number", "Order Date.1.2", "Order Date.1.1", "Order Date.1.3", "Order Date.2", "Status", "Quarter", "Month", "Year", "Product Line", "MSRP", "Product Code", "Customer Name", "Phone", "Address Line 1", "Address Line 2", "City", "State", "Postal Code", "Country", "Territory", "Contact Last Name", "Contact First Name", "Deal Size"}),
+				    #"Merged Columns" = Table.CombineColumns(Table.TransformColumnTypes(#"Reordered Columns1", {{"Order Date.1.2", type text}, {"Order Date.1.1", type text}, {"Order Date.1.3", type text}}, "en-MY"),{"Order Date.1.2", "Order Date.1.1", "Order Date.1.3"},Combiner.CombineTextByDelimiter("/", QuoteStyle.None),"Order Date"),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Merged Columns",{{"Order Date", type date}}),
+				    #"Merged Columns1" = Table.CombineColumns(Table.TransformColumnTypes(#"Changed Type3", {{"Order Date", type text}, {"Order Date.2", type text}}, "en-MY"),{"Order Date", "Order Date.2"},Combiner.CombineTextByDelimiter(" ", QuoteStyle.None),"Order Datetime"),
+				    #"Changed Type4" = Table.TransformColumnTypes(#"Merged Columns1",{{"Order Datetime", type datetime}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type4","UK","United Kingdom",Replacer.ReplaceText,{"Country"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","USA","United States",Replacer.ReplaceText,{"Country"}),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Replaced Value1", "Order Datetime", "Order Datetime - Copy"),
+				    #"Extracted Day" = Table.TransformColumns(#"Duplicated Column",{{"Order Datetime - Copy", Date.Day, Int64.Type}}),
+				    #"Renamed Columns2" = Table.RenameColumns(#"Extracted Day",{{"Order Datetime - Copy", "Day"}}),
+				    #"Reordered Columns2" = Table.ReorderColumns(#"Renamed Columns2",{"Order Number", "Quantity", "Unit Price", "Sales", "Order Line Number", "Order Datetime", "Status", "Quarter", "Day", "Month", "Year", "Product Line", "MSRP", "Product Code", "Customer Name", "Phone", "Address Line 1", "Address Line 2", "City", "State", "Postal Code", "Country", "Territory", "Contact Last Name", "Contact First Name", "Deal Size"}),
+				    #"Changed Type5" = Table.TransformColumnTypes(#"Reordered Columns2",{{"Order Number", type text}})
+				in
+				    #"Changed Type5"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

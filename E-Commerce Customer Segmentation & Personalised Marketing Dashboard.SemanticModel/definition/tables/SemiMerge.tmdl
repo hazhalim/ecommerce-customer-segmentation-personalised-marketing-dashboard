@@ -1,0 +1,99 @@
+table SemiMerge
+	lineageTag: 5eab904b-3dec-4be1-ba05-deb07b52e697
+
+	column 'Invoice No'
+		dataType: string
+		lineageTag: 33926b48-23a7-42d6-8876-8fa7f8f2d9ee
+		summarizeBy: none
+		sourceColumn: Invoice No
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Invoice Datetime'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 79101864-ddbc-4a85-886d-bd7cf2e8bc7a
+		summarizeBy: none
+		sourceColumn: Invoice Datetime
+
+		variation Variation
+			isDefault
+			relationship: 9fc4f524-bb20-48cb-be7e-52ba06db5bcb
+			defaultHierarchy: LocalDateTable_6b231890-afdb-4b3c-8204-8d518eee9d49.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Stock Code'
+		dataType: string
+		lineageTag: fffd575c-3b26-4368-9be0-925da195ccad
+		summarizeBy: none
+		sourceColumn: Stock Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Stock Description'
+		dataType: string
+		lineageTag: a1f6b41a-e888-4a01-bcfb-a3b47eeb29be
+		summarizeBy: none
+		sourceColumn: Stock Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: aa8cd86b-35e0-4a15-99a6-6ddf47820def
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unit Price'
+		dataType: double
+		lineageTag: aa860221-f2f6-4812-a5bb-eddc19fe8245
+		summarizeBy: sum
+		sourceColumn: Unit Price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Price'
+		dataType: double
+		lineageTag: a5d9a796-96e0-4859-bfc5-0609b9c0a390
+		summarizeBy: sum
+		sourceColumn: Total Price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Customer ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: f9ab8d01-5ca2-48d1-b4b1-e6a4f1c3b4c2
+		summarizeBy: count
+		sourceColumn: Customer ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 9fd1fee2-3196-4edb-9af5-d2ef47e59366
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SemiMerge = m
+		mode: import
+		source =
+				let
+				    Source = Table.NestedJoin(Retail, {"Customer ID"}, Marketing, {"Customer ID"}, "Marketing", JoinKind.FullOuter)
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

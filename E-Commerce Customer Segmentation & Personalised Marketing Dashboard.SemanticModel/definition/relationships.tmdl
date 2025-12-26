@@ -1,0 +1,49 @@
+relationship 489aebc7-c89c-475a-9579-6aa292fe47f8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Retail.'Invoice Datetime'
+	toColumn: LocalDateTable_0f67de09-9d51-4d5f-9ff8-72e9ca64b985.Date
+
+relationship 6f5dd9b6-962b-404e-ae89-6ead97837a85
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Marketing.'Customer Enrolment Date'
+	toColumn: LocalDateTable_3d09a566-3793-4df5-90bf-ce6f84586b84.Date
+
+relationship 8b55fce5-6112-42de-bef7-794d6d13e962
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Orders.'Order Datetime'
+	toColumn: LocalDateTable_afc824b8-0828-4518-90d1-20d5f858dda9.Date
+
+relationship 9fc4f524-bb20-48cb-be7e-52ba06db5bcb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SemiMerge.'Invoice Datetime'
+	toColumn: LocalDateTable_6b231890-afdb-4b3c-8204-8d518eee9d49.Date
+
+relationship a3d4d244-e75e-44a1-81a4-b8cd4975e439
+	joinOnDateBehavior: datePartOnly
+	fromColumn: MestiLaku.'Invoice Datetime'
+	toColumn: LocalDateTable_0bb3659a-5dce-4cd4-a76a-9394cf8eb6bc.Date
+
+relationship a8e5e5a7-6e21-d6ee-bd9a-b1483971ff9c
+	fromColumn: Retail.'Customer ID'
+	toColumn: Marketing.'Customer ID'
+
+relationship a82e6766-5be0-9a64-8adb-51e9230e3d13
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: Retail.'Stock Code'
+	toColumn: Orders.'Order Number'
+
+relationship 14ecbb19-aac2-44ef-8f97-69f89cf2e3cf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: MestiLaku.'Marketing.Customer Enrolment Date'
+	toColumn: LocalDateTable_6b22e038-6682-4845-81cf-a03ce42b92c2.Date
+
+relationship 749e1943-07a7-476c-bec3-3c90312c2839
+	joinOnDateBehavior: datePartOnly
+	fromColumn: MestiLaku.'Orders.Order Datetime'
+	toColumn: LocalDateTable_92e5d0dc-247b-4de2-a32d-74df14ad6315.Date
+
+relationship AutoDetected_bce5366c-3da3-4024-9673-c01db1a035a9
+	fromColumn: MestiLaku.'Marketing.Customer ID'
+	toColumn: Marketing.'Customer ID'
+

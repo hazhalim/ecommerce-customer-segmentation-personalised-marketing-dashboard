@@ -1,0 +1,87 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 775.55555555555554,
+        "y": 15.555555555555555
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1405.2323861968855,
+            "y": 415.72222222222217
+          },
+          "nodeIndex": "Orders",
+          "nodeLineageTag": "214bfb6b-cbfc-43d3-a95e-2fa0e5d54579",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1405.8990528635522,
+            "y": 2.2222222222222214
+          },
+          "nodeIndex": "Retail",
+          "nodeLineageTag": "5717afe2-d517-4fdc-acdd-689d2f0d9f14",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 993.45460841910767,
+            "y": 0
+          },
+          "nodeIndex": "Marketing",
+          "nodeLineageTag": "95d16ac8-2f5e-4d04-b0ba-51e719d8f4a4",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2625.3434973079966,
+            "y": 517.57090643274864
+          },
+          "nodeIndex": "SemiMerge",
+          "nodeLineageTag": "5eab904b-3dec-4be1-ba05-deb07b52e697",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 993.12127508577441,
+            "y": 409.79312865497076
+          },
+          "nodeIndex": "MestiLaku",
+          "nodeLineageTag": "b566dee9-d022-48ea-9bc8-0f6b5dc72c95",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 90,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

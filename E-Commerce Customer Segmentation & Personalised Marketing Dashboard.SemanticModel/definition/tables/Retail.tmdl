@@ -1,0 +1,115 @@
+table Retail
+	lineageTag: 5717afe2-d517-4fdc-acdd-689d2f0d9f14
+
+	column 'Invoice No'
+		dataType: string
+		lineageTag: eda6a149-f251-4553-884e-e3263ec082e4
+		summarizeBy: none
+		sourceColumn: Invoice No
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Invoice Datetime'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2e364e84-30f1-42b2-b383-57c68deda566
+		summarizeBy: none
+		sourceColumn: Invoice Datetime
+
+		variation Variation
+			isDefault
+			relationship: 489aebc7-c89c-475a-9579-6aa292fe47f8
+			defaultHierarchy: LocalDateTable_0f67de09-9d51-4d5f-9ff8-72e9ca64b985.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Stock Code'
+		dataType: string
+		lineageTag: 025f0052-6ad3-46c6-8d5b-a735b0a825c7
+		summarizeBy: none
+		sourceColumn: Stock Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Stock Description'
+		dataType: string
+		lineageTag: eebe2f7d-01e0-44da-93e8-849c1cf8b57a
+		summarizeBy: none
+		sourceColumn: Stock Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 32dfd363-3da7-466a-8fa5-0b662bcbe4b1
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unit Price'
+		dataType: double
+		lineageTag: d81daaa9-f17b-4a8c-b218-85d56ed38551
+		summarizeBy: sum
+		sourceColumn: Unit Price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Price'
+		dataType: double
+		lineageTag: 126c8f5d-574a-428e-8691-904fafc00d89
+		summarizeBy: sum
+		sourceColumn: Total Price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Customer ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: e195f971-4e5d-4ef4-954f-beec91a40205
+		summarizeBy: none
+		sourceColumn: Customer ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 2cb0fa17-0c05-4106-8441-199f9fc92925
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Retail = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://365umedumy.sharepoint.com/sites/WIE3008GP1Group11", [ApiVersion = 15]),
+				    #"online_retail_dataset csv_https://365umedumy sharepoint com/sites/WIE3008GP1Group11/Shared Documents/" = Source{[Name="online_retail_dataset.csv",#"Folder Path"="https://365umedumy.sharepoint.com/sites/WIE3008GP1Group11/Shared Documents/"]}[Content],
+				    #"Imported CSV" = Csv.Document(#"online_retail_dataset csv_https://365umedumy sharepoint com/sites/WIE3008GP1Group11/Shared Documents/",[Delimiter=",", Columns=12, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Imported CSV", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"InvoiceNo", type text}, {"StockCode", type text}, {"Description", type text}, {"Quantity", Int64.Type}, {"IncomeDate", type datetime}, {"UnitPrice", type number}, {"CustomerID", Int64.Type}, {"Country", type text}, {"InvoiceDat", type datetime}, {"InvoiceDay", Int64.Type}, {"InvoiceMonth", Int64.Type}, {"InvoiceRest", type text}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"InvoiceNo", "Invoice No"}, {"StockCode", "Stock Code"}, {"Description", "Stock Description"}, {"IncomeDate", "Income Date"}, {"UnitPrice", "Unit Price"}, {"CustomerID", "Customer ID"}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Renamed Columns",{"InvoiceDat", "InvoiceDay", "InvoiceMonth", "InvoiceRest"}),
+				    #"Capitalized Each Word" = Table.TransformColumns(#"Removed Columns",{{"Stock Description", Text.Proper, type text}}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Capitalized Each Word",{"Invoice No", "Income Date", "Stock Code", "Stock Description", "Quantity", "Unit Price", "Customer ID", "Country"}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Reordered Columns",{{"Income Date", "Invoice Date"}}),
+				    #"Added Custom" = Table.AddColumn(#"Renamed Columns1", "Total Price", each [Quantity]*[Unit Price]),
+				    #"Reordered Columns1" = Table.ReorderColumns(#"Added Custom",{"Invoice No", "Invoice Date", "Stock Code", "Stock Description", "Quantity", "Unit Price", "Total Price", "Customer ID", "Country"}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Reordered Columns1",{{"Total Price", type number}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type1","EIRE","Ireland",Replacer.ReplaceText,{"Country"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","RSA","South Africa",Replacer.ReplaceText,{"Country"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","USA","United States",Replacer.ReplaceText,{"Country"}),
+				    #"Renamed Columns2" = Table.RenameColumns(#"Replaced Value2",{{"Invoice Date", "Invoice Datetime"}})
+				in
+				    #"Renamed Columns2"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
